@@ -3,6 +3,8 @@ import createLeague from '../../store/actions/leagueActions'
 import { connect } from 'react-redux'
 
 const LeagueTable = ({ leagueTable }) => {
+
+    
     return (
         <div className="project-list section">
             <table class="ui celled table">
