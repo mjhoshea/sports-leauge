@@ -2,12 +2,13 @@ import React, { Component } from 'react'
 import Notifications from './Notifications'
 import LeagueTable from '../league/LeagueTable'
 import { connect } from 'react-redux'
+import { Redirect } from 'react-router-dom'
 
 class Dashboard extends Component {
     render() {
         //console.log(this.props)
-        const { leagueTable } = this.props
-
+        const { leagueTable, auth } = this.props
+        if(!auth.uid) return <Redirect to='/signin' />
         return (
             <div className="dashboard container">
                 <div className="row">
@@ -27,7 +28,8 @@ class Dashboard extends Component {
 
 const mapStateToProps = (state) => {
     return {
-        leagueTable: state.league.leagueTable
+        leagueTable: state.league.leagueTable,
+        auth: state.firebase.auth
     }
 }
 
