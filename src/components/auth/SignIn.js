@@ -5,8 +5,8 @@ import { signIn } from '../../store/actions/authActions'
 class SignIn extends Component {
     state = {
         email: '',
-        password: ''
-
+        password: '',
+        results: [],
     }
 
     handleChange = (e) => {

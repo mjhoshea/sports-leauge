@@ -6,6 +6,7 @@ import SignIn from './components/auth/SignIn'
 import SignUp from './components/auth/SignUp'
 import Rules from './components/league/Rules'
 import Fixtures from './components/league/Fixtures'
+import AddResult from './components/results/AddResult'
 
 
 
@@ -21,6 +22,7 @@ class App extends Component {
           <Route path='/signup' component={SignUp} />
           <Route path='/rules' component={Rules} />
           <Route path='/fixtures' component={Fixtures} />
+          <Route path='/results' component={AddResult} />
           </Switch>
         </div>
       </BrowserRouter>
